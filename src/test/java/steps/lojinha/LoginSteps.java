@@ -1,13 +1,12 @@
-package features.steps.lojinha;
+package steps.lojinha;
 
-import cucumber.api.java.pt.Dado;
-import cucumber.api.java.pt.Entao;
-import cucumber.api.java.pt.Quando;
-
+import io.cucumber.java.pt.Dado;
+import io.cucumber.java.pt.Entao;
+import io.cucumber.java.pt.Quando;
 import org.junit.jupiter.api.Assertions;
 
-import static support.spec_helper.initializePage.paginaListaProduto;
-import static support.spec_helper.initializePage.paginaLogin;
+import static core.InitializePage.paginaListaProduto;
+import static core.InitializePage.paginaLogin;
 
 public class LoginSteps {
 

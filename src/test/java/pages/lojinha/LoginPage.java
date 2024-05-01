@@ -1,9 +1,8 @@
-package features.pages.lojinha;
+package pages.lojinha;
 
+import core.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import static support.hooks.Environment.browser;
 
 public class LoginPage extends BasePage{
     @FindBy(id = "usuario")
@@ -14,7 +13,7 @@ public class LoginPage extends BasePage{
     private WebElement botaoEntrar;
 
     public void abrirPaginaLogin(){
-        browser.get(PATH);
+        Driver.getBrowser().get(PATH);
     }
     public LoginPage preencherFormularioLogin(String usuario, String senha) {
         campoUsuario.sendKeys(usuario);

@@ -1,4 +1,4 @@
-package features.pages.lojinha;
+package pages.lojinha;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

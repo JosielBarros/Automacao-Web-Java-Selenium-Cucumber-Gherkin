@@ -1,9 +1,9 @@
-package support.spec_helper;
+package core;
 
-import features.pages.lojinha.ListaProdutosPage;
-import features.pages.lojinha.LoginPage;
+import pages.lojinha.ListaProdutosPage;
+import pages.lojinha.LoginPage;
 
-public class initializePage {
+public class InitializePage {
     public static LoginPage paginaLogin(){
         return new LoginPage();
     }
