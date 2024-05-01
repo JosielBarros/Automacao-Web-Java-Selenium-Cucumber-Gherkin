@@ -1,8 +1,25 @@
 ------------------
 ------------------
-Para executar os cenários específicos via terminal:
- mvn test -Dcucumber.filter.tags="@login"
 
-Para executar os cenários específicos via terminal e gerar os relatórios:
+Parâmetros aceitáveis:
+    Browser=chrome,edge,firefox,chrome-ci.
+    Screen=mobile, desktop.
+
+Comandos padrões:
+    Browser=chrome
+    Screen=desktop
+
+Comandos completo:
+    mvn install test -Dcucumber.filter.tags="@login" -Dbrowser="chrome" -Dscreen="mobile"
+
+Comando básico:
+    mvn test -Dcucumber.filter.tags="@login"
+
+Comandos para executar todos os testes:
+    mvn test
+
+Comando para executar os cenários específicos via terminal e gerar os relatórios, incluir o install:
     mvn install test -Dcucumber.filter.tags="@login"
+
+
 
