@@ -19,6 +19,7 @@ public class Driver {
     }
     public static void initializeDriver() throws Exception {
         String navegador = System.getProperty("browser");
+
         if (navegador == null){navegador = "chrome";}
 
         switch (navegador){
@@ -34,13 +35,19 @@ public class Driver {
                 browser = new EdgeDriver();
                 break;
             case "firefox":
-                browser = new SafariDriver();
+                browser = new FirefoxDriver();
                 break;
             default:
                 throw new Exception("Não há implementação para o navegador " + navegador + ".");
         }
 
-        browser.manage().window().setSize(new Dimension(1366, 768));
+        String screen = System.getProperty("screen");
+        if (screen == null) { screen = "desktop";}
+
+        int width = screen.equals("mobile") ? 390 : 1366;
+        int height = screen.equals("mobile") ? 844 : 768;
+
+        browser.manage().window().setSize(new Dimension(width, height));
         browser.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     }
 }
