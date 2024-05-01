@@ -1,0 +1,8 @@
+------------------
+------------------
+Para executar os cenários específicos via terminal:
+ mvn test -Dcucumber.filter.tags="@login"
+
+Para executar os cenários específicos via terminal e gerar os relatórios:
+    mvn install test -Dcucumber.filter.tags="@login"
+
